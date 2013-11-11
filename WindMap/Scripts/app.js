@@ -113,11 +113,11 @@
             var dir = 0;    // start angle      
             var radius;     // radius semicircle
             var myIcon = L.icon({
-                iconUrl: '../Content/images/marker-icon.png',
+                iconUrl: 'Content/images/marker-icon.png',
                 iconSize: [25, 41],
                 iconAnchor: [12, 41],
                 popupAnchor: [1, -25],
-                shadowUrl: '../Content/images/marker-shadow.png',
+                shadowUrl: 'Content/images/marker-shadow.png',
                 shadowSize: [41, 41],
 
             });
