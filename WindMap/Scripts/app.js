@@ -109,7 +109,7 @@
         windRouse(arr5, kunda_point, kunda, cities[4]);
 
         function windRouse(arr, center, rouse, sity) {
-            var z = 2500;    // zoom
+            var z = 2500;   // zoom
             var dir = 0;    // start angle      
             var radius;     // radius semicircle
             var myIcon = L.icon({
@@ -118,8 +118,7 @@
                 iconAnchor: [12, 41],
                 popupAnchor: [1, -25],
                 shadowUrl: 'Content/images/marker-shadow.png',
-                shadowSize: [41, 41],
-
+                shadowSize: [41, 41]
             });
             var marker = L.marker(center, { icon: myIcon }).addTo(map);
             marker.bindPopup("<b>" + sity + "</b>").openPopup();
