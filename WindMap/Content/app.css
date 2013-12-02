@@ -155,8 +155,77 @@ ol {
     margin-top: 5px;
     margin-bottom: 10px;
     padding-top: 10px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #e2e2e2;
 }
 #myDropdown a {
     text-decoration: none;
+}
+
+.compare-power {
+    background-color: #ecf0f1;
+
+}
+
+.compare-item {
+    position: relative;
+    display: block;
+    width: 100%;
+    height:330px;
+    padding:15px;
+
+}
+.compare-item h4, .compare-item p {
+    margin: 0;
+    color: #333;
+}
+.compare-text {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.compare-left, .compare-right {
+    height: 300px;
+    width: 40%;
+    display: inline-block;
+    position: relative;
+}
+.compare-left  {
+    float: left;
+    background-size: cover;
+    background-position: 50%;    
+}
+.station-one {
+    background-image: url('images/central.jpg');
+}
+.station-two {
+    background-image: url('images/north.jpg');
+}
+.station-three {
+    background-image: url('images/atom.jpg');
+}
+.compare-right {
+    float: right;
+    background-image: url('images/wind_turbine.jpg');
+    background-size: cover;
+    background-position: 50%;
+}
+.compare-count {
+    position: absolute;
+    top: 30%;
+    left: 26%;
+    color: #fff;
+    font-size: 80px;
+    font-weight: 600;
+    opacity: 0.85;
+}
+.compare-symbol {
+    position: absolute;
+    left: 47.5%;
+    top: 100px;
+    height: 300px;
+    font-size: 100px;
+    font-weight: 600;
+    color: #b7b7b7;
 }
