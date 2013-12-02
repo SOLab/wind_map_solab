@@ -12,7 +12,6 @@
             $('html, body').animate({
                 scrollTop: $($(this).attr("href")).offset().top + "px"
             }, { duration: 700 });
-            return false;
         });
 
 
@@ -26,8 +25,15 @@
                 $('.diameter').html(windTower[val]['diameter'] + ' м');
                 $('.height').html(windTower[val]['height'] + ' м');
                 $('.speed').html(windTower[val]['speed'] + ' м/с');
-                $('.power').html(windTower[val]['power'] + ' МВт/год');
+                $('.power').html(windTower[val]['power'] + ' МВтч в год');
                 $('.info').html(windTower[val]['info']);
+
+                $('.compare-right h4 span').text(data['selectedData']['text']);
+                $('.compare-right p span').text(data['selectedData']['power']);
+
+                $('.compare-right .compare-one span').text(windTower[val]['centralCHP']);
+                $('.compare-right .compare-two span').text(windTower[val]['northCHP']);
+                $('.compare-right .compare-three span').text(windTower[val]['lenNPP']);
             }
         });
     });
@@ -174,6 +180,7 @@
     var ddData = [    
     {
         text: "Vestas V80-2.0 MW",
+        power: '2,000 кВт',
         value: 0,
         selected: true,
         truncateDescription: true,
@@ -182,6 +189,7 @@
     },
     {
         text: "Vestas V90-3.0 MW",
+        power: '3,000 кВт',
         value: 1,
         selected: false,        
         description: "Rotor diameter: 90 м <br/>"+
@@ -189,6 +197,7 @@
     },
     {
         text: "Vestas V100-2.6 MW",
+        power: '2,600 кВт',
         value: 2,
         selected: false,
         truncateDescription: true,
@@ -197,6 +206,7 @@
     },
     {
         text: "Vestas V164-8.0 MW",
+        power: '8,000 кВт',
         value: 3,
         selected: false,
         truncateDescription: true,
@@ -216,7 +226,10 @@
                 "Номинальная скорость ветра: 14.5 м/с <br/>" +
                 "Максимальная скорость ветра: 25 м/с <br/>" +
                 "Категория ветра: IEC IA <br/>" +
-                "Диапазон рабочих температур: стандартная турбина -20°C до 40°C,  низкотемпературная турбина -30°C до 40°C"
+                "Диапазон рабочих температур: стандартная турбина -20°C до 40°C,  низкотемпературная турбина -30°C до 40°C",
+        centralCHP: '128',
+        northCHP: '680',
+        lenNPP: '8209'
     },
     {
         diameter: '90',
@@ -228,7 +241,10 @@
                 "Номинальная скорость ветра: 15 м/с <br/>" +
                 "Максимальная скорость ветра: 25 м/с <br/>" +
                 "Категория ветра: IEC IA и IEC IIA <br/>" +
-                "Диапазон рабочих температур: стандартная турбина -20°C до 40°C, низкотемпературная турбина -30°C до 40°C"
+                "Диапазон рабочих температур: стандартная турбина -20°C до 40°C, низкотемпературная турбина -30°C до 40°C",
+        centralCHP: '101',
+        northCHP: '536',
+        lenNPP: '6500'
     },
     {
         diameter: '100',
@@ -240,7 +256,10 @@
                 "Номинальная скорость ветра: 14 м/с <br/>" +
                 "Максимальная скорость ветра: 23 м/с <br/>" +
                 "Категория ветра: IEC IIB <br/>" +
-                "Диапазон рабочих температур: стандартная турбина -20°C до 40°C, низкотемпературная турбина -30°C до 40°C"
+                "Диапазон рабочих температур: стандартная турбина -20°C до 40°C, низкотемпературная турбина -30°C до 40°C",
+        centralCHP: '82',
+        northCHP: '435',
+        lenNPP: '5255'
     },
     {
         diameter: '164',
@@ -252,7 +271,10 @@
                 "Частота вращения ротора: 4.8 - 12.1 об/мин <br/>" +
                 "Номинальная частота вращения ротора: 10.5 об/мин <br/>" +
                 "Диапазон рабочих температур: -10°C до +25°C <br/>" +
-                "Предельный рабочий диапазон температур: -15°C до +35°C"
+                "Предельный рабочий диапазон температур: -15°C до +35°C",
+        centralCHP: '31',
+        northCHP: '162',
+        lenNPP: '1954'
     }
     ];
 
